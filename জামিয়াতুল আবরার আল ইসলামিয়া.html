@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>জামিয়াতুল আবরার আল ইসলামিয়া</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f5f2;--surf:#fff;--ink:#12302b;--mute:#587470;--line:#d6e2de;--hd:#0b4a43;--btn:#0b4a43;--onbtn:#fff;--tile:#e3eee9;--gold:#b8892b;--ok:#1b7f4b;--bad:#b3392f;--okbg:#e1f3e9;--badbg:#f9e4e1;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1816;--surf:#142623;--ink:#e4efec;--mute:#8fa8a4;--line:#26403c;--hd:#7fd3c7;--btn:#1f8a7d;--tile:#1d3532;--gold:#e0bb4d;--ok:#5fd08e;--bad:#f08a80;--okbg:#17382a;--badbg:#44211e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1816;--surf:#142623;--ink:#e4efec;--mute:#8fa8a4;--line:#26403c;--hd:#7fd3c7;--btn:#1f8a7d;--tile:#1d3532;--gold:#e0bb4d;--ok:#5fd08e;--bad:#f08a80;--okbg:#17382a;--badbg:#44211e;color-scheme:dark}
+*{box-sizing:border-box}
+:root{padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Hind Siliguri",system-ui,sans-serif}
+header{background:#0b4a43 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='%23c9a24a' stroke-opacity='.3'%3E%3Crect x='10' y='10' width='24' height='24'/%3E%3Crect x='10' y='10' width='24' height='24' transform='rotate(45 22 22)'/%3E%3C/g%3E%3C/svg%3E");padding:calc(env(safe-area-inset-top,0px) + 16px) 16px 18px;border-bottom:4px solid #c9a24a;text-align:center;color:#fff}
+.bis{margin:0 0 6px;color:#e7cf8e;font-size:18px}
+h1{margin:0;font:700 21px/1.4 "Noto Serif Bengali",serif}
+header p{margin:0}
+.addr{color:#e7cf8e;font-size:14px}
+.dt{color:#b8d4cf;font-size:13px;margin-top:2px!important}
+main{max-width:640px;margin:0 auto;padding:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.stats div{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center;color:var(--mute);font-size:13px}
+.stats b{display:block;font-size:26px;line-height:1.2;color:var(--hd)}
+.stats .w b{color:var(--bad)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;background:var(--surf);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;font:inherit}
+.tile i{font-style:normal;font-size:24px;width:46px;height:46px;border-radius:50%;background:var(--tile);display:grid;place-items:center;margin-bottom:6px}
+.tile span{font-weight:600}
+.tile small{color:var(--mute);font-size:13px;line-height:1.35}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+h2.mt{font:700 20px "Noto Serif Bengali",serif;color:var(--hd);margin:10px 0}
+h3{font-size:16px;margin:0 0 8px;color:var(--hd)}
+summary{font-weight:600;cursor:pointer;color:var(--hd)}
+label{display:block;font-size:14px;color:var(--mute);margin:10px 0 3px}
+input,select,textarea{width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+button{font:inherit;cursor:pointer}
+.full,.btn{display:block;width:100%;margin-top:14px;border:0;border-radius:8px;padding:11px;background:var(--btn);color:var(--onbtn);font-weight:600;text-align:center}
+.btn{width:auto;margin:0;padding:7px 12px;text-decoration:none;font-size:14px;white-space:nowrap}
+.back{background:none;border:0;color:var(--hd);padding:6px 0;font-weight:600}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px}
+.chips button{flex:none;border:1px solid var(--line);background:var(--surf);color:var(--mute);border-radius:99px;padding:6px 14px}
+.chips button.on{background:var(--btn);color:var(--onbtn);border-color:var(--btn)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row small{display:block;color:var(--mute);font-size:13px}
+.end{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.tag{font-size:13px;padding:2px 10px;border-radius:99px;background:var(--tile);color:var(--hd);white-space:nowrap}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.bad{background:var(--badbg);color:var(--bad)}
+.x{background:none;border:0;color:var(--mute);padding:6px}
+.mini{margin-top:4px;border:1px solid var(--line);background:var(--bg);color:var(--hd);border-radius:6px;padding:3px 10px;font-size:13px}
+.seg{display:flex;gap:6px}
+.seg button{background:var(--bg);color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px}
+.seg .p.on{background:var(--okbg);color:var(--ok);border-color:var(--ok)}
+.seg .a.on{background:var(--badbg);color:var(--bad);border-color:var(--bad)}
+.empty,.mu{color:var(--mute);text-align:center;margin:8px 0}
+.ghost{display:block;margin:6px auto;background:none;border:0;color:var(--mute);text-decoration:underline}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media print{header,.back,.chips,.ghost,details,.x,.btn,.mini{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+<p class="bis">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+<h1>জামিয়াতুল আবরার আল ইসলামিয়া আনোয়ারা কমপ্লেক্স</h1>
+<p class="addr">নলাগড়িয়া, ভাকুর্তা, সাভার, ঢাকা</p>
+<p class="dt" id="today"></p>
+</header>
+<main id="app"></main>
+<script>
+var KEY="madrasa-v1",CL=["নূরানী","নাজেরা","হিফজ","কিতাব বিভাগ"],DAYS=["শনিবার","রবিবার","সোমবার","মঙ্গলবার","বুধবার","বৃহস্পতিবার"];
+var COLS=["students","staff","results","sobok","routine","conduct","ledger","pay","seats","menu","bazar","notice","library","assets","health","scholar"];
+var S={att:{}};
+try{var r0=localStorage.getItem(KEY);if(r0)S=JSON.parse(r0)}catch(e){}
+function fix(){S.att=S.att||{};COLS.forEach(function(c){S[c]=S[c]||[]})}fix();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+var bn=function(n){return Number(n||0).toLocaleString("bn-BD")};
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var now=new Date(),p2=function(n){return String(n).padStart(2,"0")};
+var TODAY=now.getFullYear()+"-"+p2(now.getMonth()+1)+"-"+p2(now.getDate()),MONTH=TODAY.slice(0,7);
+document.getElementById("today").textContent=now.toLocaleDateString("bn-BD",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+function sn(id){var s=S.students.find(function(x){return x.id===id});return s?s.name:"মুছে ফেলা ছাত্র"}
+var dt=function(r){return r.dt||r.d||""};
+
+var D={
+students:{t:"ছাত্র",f:[["name","নাম"],["cls","শ্রেণি","s",CL],["roll","রোল","n"],["guardian","অভিভাবকের নাম"],["phone","অভিভাবকের মোবাইল"],["res","আবাসন","s",["অনাবাসিক","আবাসিক"]],["fee","মাসিক ফি (৳)","n"]],line:function(r){return[r.name,(r.cls||"")+" · রোল "+bn(r.roll)+" · "+(r.res||"অনাবাসিক")+(r.guardian?" · "+r.guardian:""),r.phone]}},
+staff:{t:"শিক্ষক/কর্মচারী",f:[["name","নাম"],["role","পদ","s",["মুহতামিম","মুফতি","শিক্ষক","হাফেজ","কারী","কর্মচারী"]],["phone","মোবাইল"],["salary","মাসিক বেতন (৳)","n"]],line:function(r){return[r.name,(r.role||"")+(r.phone?" · "+r.phone:""),"৳"+bn(r.salary),'<button class="mini" onclick="paySal('+r.id+')">'+(r.paid&&r.paid[MONTH]?"✓ এ মাসের বেতন দেওয়া হয়েছে":"বেতন দিয়েছি")+"</button>"]}},
+results:{t:"পরীক্ষার ফল",f:[["sid","ছাত্র","st"],["exam","পরীক্ষার নাম"],["sub","বিষয়"],["mk","প্রাপ্ত নম্বর","n"],["tot","পূর্ণমান","n"]],line:function(r){return[sn(r.sid),r.exam+" · "+r.sub,bn(r.mk)+"/"+bn(r.tot)]}},
+sobok:{t:"সবক",f:[["sid","ছাত্র","st"],["type","ধরন","s",["সবক","সবকী","আমুখতা"]],["para","পারা/পৃষ্ঠা"],["dt","তারিখ","d"]],line:function(r){return[sn(r.sid),r.type+" · "+r.para,dt(r)]}},
+routine:{t:"রুটিন",f:[["day","বার","s",DAYS],["time","সময়"],["cls","শ্রেণি","s",CL],["sub","বিষয়"],["teacher","শিক্ষক"]],line:function(r){return[r.day+" · "+r.time,r.cls+" · "+r.sub,r.teacher]}},
+conduct:{t:"আচরণ রেকর্ড",f:[["sid","ছাত্র","st"],["note","বিবরণ","a"],["dt","তারিখ","d"]],line:function(r){return[sn(r.sid),r.note,dt(r)]}},
+ledger:{t:"আয়-ব্যয়",f:[["type","খাত","s",["দান","যাকাত","ফিতরা","চাঁদা","ব্যয়"]],["amt","পরিমাণ (৳)","n"],["note","বিবরণ/দাতার নাম"],["dt","তারিখ","d"]],line:function(r){return[r.type+" — ৳"+bn(r.amt),r.note+" "+dt(r),r.type==="ব্যয়"?"ব্যয়":"আয়"]}},
+seats:{t:"সিট বণ্টন",f:[["sid","ছাত্র","st"],["room","রুম"],["seat","সিট নম্বর"]],line:function(r){return[sn(r.sid),"রুম "+r.room+" · সিট "+r.seat]}},
+menu:{t:"খাবারের মেনু",f:[["day","বার","s",DAYS],["meal","মেনু"]],line:function(r){return[r.day,r.meal]}},
+bazar:{t:"বাজার খরচ",f:[["item","বাজারের বিবরণ"],["amt","খরচ (৳)","n"],["dt","তারিখ","d"]],line:function(r){return[r.item,dt(r),"৳"+bn(r.amt)]}},
+notice:{t:"নোটিশ",f:[["title","শিরোনাম"],["body","বিস্তারিত","a"]],line:function(r){return[r.title,r.body,r.d]}},
+library:{t:"লাইব্রেরি",f:[["book","বইয়ের নাম"],["borrower","ধার নিয়েছেন (খালি থাকলে জমা আছে)"]],line:function(r){return[r.book,r.borrower?"ধার: "+r.borrower:"লাইব্রেরিতে আছে"]}},
+assets:{t:"সম্পদ",f:[["item","জিনিসের নাম"],["qty","পরিমাণ","n"],["cond","অবস্থা","s",["ভালো","মেরামত দরকার","নষ্ট"]]],line:function(r){return[r.item,"পরিমাণ "+bn(r.qty),r.cond]}},
+health:{t:"স্বাস্থ্য রেকর্ড",f:[["sid","ছাত্র","st"],["note","সমস্যা/চিকিৎসা","a"],["dt","তারিখ","d"]],line:function(r){return[sn(r.sid),r.note,dt(r)]}},
+scholar:{t:"বৃত্তি/এতিম সহায়তা",f:[["sid","ছাত্র","st"],["note","ধরন/বিবরণ"],["amt","পরিমাণ (৳)","n"]],line:function(r){return[sn(r.sid),r.note,"৳"+bn(r.amt)]}},
+attS:{t:"ছাত্র"},attT:{t:"শিক্ষক"},attR:{t:"মাসিক রিপোর্ট"},fees:{t:"ফি আদায়"},sum:{t:"সারাংশ"},sms:{t:"SMS"},backup:{t:"ব্যাকআপ"}
+};
+var M=[
+{id:"stu",ic:"🎓",t:"ভর্তি ও ছাত্র",d:"ভর্তি, প্রোফাইল, আবাসন",s:["students"]},
+{id:"stf",ic:"🧑‍🏫",t:"শিক্ষক ও কর্মচারী",d:"তথ্য ও বেতন",s:["staff"]},
+{id:"aca",ic:"📖",t:"একাডেমিক",d:"ফল, সবক, রুটিন, আচরণ",s:["results","sobok","routine","conduct"]},
+{id:"att",ic:"✅",t:"হাজিরা",d:"ছাত্র, শিক্ষক, রিপোর্ট",s:["attS","attT","attR"]},
+{id:"fin",ic:"💰",t:"হিসাব",d:"ফি, দান, আয়-ব্যয়",s:["fees","ledger","sum"]},
+{id:"hos",ic:"🛏️",t:"হোস্টেল",d:"সিট, খাবার, বাজার",s:["seats","menu","bazar"]},
+{id:"com",ic:"📢",t:"যোগাযোগ",d:"নোটিশ ও SMS",s:["notice","sms"]},
+{id:"oth",ic:"🗂️",t:"অন্যান্য",d:"লাইব্রেরি, সম্পদ, স্বাস্থ্য, বৃত্তি",s:["library","assets","health","scholar","backup"]}];
+var mod=null,sub=null;
+function go(id){mod=id||null;sub=id?M.find(function(m){return m.id===id}).s[0]:null;render();window.scrollTo(0,0)}
+function setSub(k){sub=k;render()}
+
+function render(){
+var a=document.getElementById("app");
+if(!mod){a.innerHTML=vHome();return}
+var m=M.find(function(x){return x.id===mod});
+a.innerHTML='<button class="back" onclick="go()">← হোম</button><h2 class="mt">'+m.ic+" "+m.t+"</h2>"+
+(m.s.length>1?'<div class="chips">'+m.s.map(function(k){return '<button class="'+(k===sub?"on":"")+'" onclick="setSub(\''+k+'\')">'+D[k].t+"</button>"}).join("")+"</div>":"")+
+(D[sub].f?vSub(sub):CUST[sub]())+'<button class="ghost" onclick="window.print()">প্রিন্ট করুন</button>';
+}
+function vHome(){
+var a=S.att[TODAY]||{},pr=S.students.filter(function(s){return a[s.id]==="p"}).length,n=S.notice[S.notice.length-1];
+return '<div class="stats"><div><b>'+bn(S.students.length)+'</b>ছাত্র</div><div><b>'+bn(pr)+'</b>আজ উপস্থিত</div><div class="w"><b>'+bn(dues().length)+'</b>ফি বকেয়া</div></div>'+
+'<div class="tiles">'+M.map(function(m){return '<button class="tile" onclick="go(\''+m.id+'\')"><i>'+m.ic+"</i><span>"+m.t+"</span><small>"+m.d+"</small></button>"}).join("")+"</div>"+
+(n?'<div class="card" style="margin-top:12px"><h3>সর্বশেষ নোটিশ: '+esc(n.title)+'</h3><p class="mu" style="text-align:left;margin:0">'+esc(n.body)+"</p></div>":"");
+}
+function vSub(k){
+var d=D[k],form=d.f.map(function(f){var id="f_"+f[0],t=f[2],o;
+if(t==="s")o='<select id="'+id+'">'+f[3].map(function(x){return "<option>"+x+"</option>"}).join("")+"</select>";
+else if(t==="st")o=S.students.length?'<select id="'+id+'">'+S.students.map(function(s){return '<option value="'+s.id+'">'+esc(s.name)+" — "+esc(s.cls)+"</option>"}).join("")+"</select>":'<p class="mu">আগে ছাত্র যোগ করুন</p>';
+else if(t==="a")o='<textarea id="'+id+'" rows="3"></textarea>';
+else o='<input id="'+id+'"'+(t==="n"?' type="number" inputmode="numeric"':t==="d"?' type="date"':"")+">";
+return "<label>"+f[1]+"</label>"+o}).join("");
+var list=S[k].slice().reverse().map(function(r){var l=d.line(r);
+return '<div class="row"><div><b>'+esc(l[0])+"</b><small>"+esc(l[1])+"</small>"+(l[3]||"")+'</div><div class="end">'+(l[2]?'<span class="tag">'+esc(l[2])+"</span>":"")+'<button class="x" aria-label="মুছুন" onclick="del(\''+k+"',"+r.id+')">✕</button></div></div>'}).join("");
+return '<details class="card"'+(S[k].length?"":" open")+"><summary>＋ নতুন "+d.t+' যোগ করুন</summary>'+form+'<button class="full" onclick="add(\''+k+'\')">সংরক্ষণ করুন</button></details><div class="card"><h3>'+d.t+" ("+bn(S[k].length)+")</h3>"+(list||'<p class="empty">এখনো কিছু যোগ করা হয়নি</p>')+"</div>";
+}
+function add(k){
+var d=D[k],r={id:Date.now()+Math.floor(Math.random()*999),d:TODAY};
+for(var i=0;i<d.f.length;i++){var f=d.f[i],e=document.getElementById("f_"+f[0]),v=e?e.value.trim():"";
+if(i===0&&!v){alert("প্রথম ঘরটি পূরণ করুন");return}
+r[f[0]]=f[2]==="n"?Number(v)||0:f[2]==="st"?Number(v):v}
+S[k].push(r);save();render();
+}
+function del(k,id){if(!confirm("মুছে ফেলবেন?"))return;S[k]=S[k].filter(function(r){return r.id!==id});save();render()}
+function paySal(id){var s=S.staff.find(function(x){return x.id===id});s.paid=s.paid||{};s.paid[MONTH]=!s.paid[MONTH];save();render()}
+function mark(id,v){(S.att[TODAY]=S.att[TODAY]||{})[id]=v;save();render()}
+function attView(c){
+var a=S.att[TODAY]||{},L=S[c];
+if(!L.length)return '<div class="card"><p class="empty">আগে তালিকা যোগ করুন</p></div>';
+var p=L.filter(function(x){return a[x.id]==="p"}).length;
+return '<div class="card"><h3>আজকের হাজিরা — উপস্থিত '+bn(p)+"/"+bn(L.length)+"</h3>"+L.map(function(x){return '<div class="row"><div><b>'+esc(x.name)+"</b><small>"+esc(x.cls||x.role)+'</small></div><div class="seg"><button class="p '+(a[x.id]==="p"?"on":"")+'" onclick="mark('+x.id+',\'p\')">উপস্থিত</button><button class="a '+(a[x.id]==="a"?"on":"")+'" onclick="mark('+x.id+',\'a\')">অনুপস্থিত</button></div></div>'}).join("")+"</div>";
+}
+function attRep(){
+var ks=Object.keys(S.att).filter(function(d){return d.indexOf(MONTH)===0}),L=S.students.concat(S.staff);
+return '<div class="card"><h3>এই মাসের হাজিরা রিপোর্ট</h3>'+(L.length?L.map(function(x){var p=0,a=0;ks.forEach(function(k){var v=S.att[k][x.id];if(v==="p")p++;if(v==="a")a++});return '<div class="row"><b>'+esc(x.name)+'</b><div class="end"><span class="tag ok">উপস্থিত '+bn(p)+'</span><span class="tag bad">অনুপস্থিত '+bn(a)+"</span></div></div>"}).join(""):'<p class="empty">তথ্য নেই</p>')+"</div>";
+}
+function paid(id){return S.pay.filter(function(p){return p.sid===id&&p.month===MONTH}).reduce(function(x,p){return x+p.amt},0)}
+function dues(){return S.students.filter(function(s){return(s.fee||0)>paid(s.id)})}
+function vFees(){
+var d=dues();
+return '<details class="card"'+(S.pay.length?"":" open")+"><summary>＋ ফি জমা নিন</summary>"+(S.students.length?'<label>ছাত্র</label><select id="ps">'+S.students.map(function(s){return '<option value="'+s.id+'">'+esc(s.name)+" — "+esc(s.cls)+"</option>"}).join("")+'</select><label>পরিমাণ (৳)</label><input id="pa" type="number" inputmode="numeric"><label>মাস</label><input id="pm" type="month" value="'+MONTH+'"><button class="full" onclick="addPay()">ফি জমা করুন</button>':'<p class="empty">আগে ছাত্র যোগ করুন</p>')+
+'</details><div class="card"><h3>এই মাসের বকেয়া ('+bn(d.length)+")</h3>"+(d.map(function(s){return '<div class="row"><div><b>'+esc(s.name)+"</b><small>"+esc(s.cls)+'</small></div><span class="tag bad">৳'+bn(s.fee-paid(s.id))+"</span></div>"}).join("")||'<p class="empty">কোনো বকেয়া নেই</p>')+
+'</div><div class="card"><h3>সাম্প্রতিক জমা</h3>'+(S.pay.slice(-8).reverse().map(function(p){return '<div class="row"><div><b>'+esc(sn(p.sid))+"</b><small>"+esc(p.month)+'</small></div><span class="tag ok">৳'+bn(p.amt)+"</span></div>"}).join("")||'<p class="empty">এখনো কিছু জমা হয়নি</p>')+"</div>";
+}
+function addPay(){
+var amt=Number(document.getElementById("pa").value);
+if(!amt||amt<=0){alert("সঠিক পরিমাণ লিখুন");return}
+S.pay.push({id:Date.now(),sid:Number(document.getElementById("ps").value),amt:amt,month:document.getElementById("pm").value||MONTH,date:TODAY});save();render();
+}
+function vSum(){
+var fee=S.pay.filter(function(p){return p.month===MONTH}).reduce(function(x,p){return x+p.amt},0),inc=0,oth=0;
+S.ledger.forEach(function(r){if(dt(r).slice(0,7)!==MONTH)return;if(r.type==="ব্যয়")oth+=r.amt;else inc+=r.amt});
+var sal=S.staff.reduce(function(x,s){return x+(s.paid&&s.paid[MONTH]?s.salary||0:0)},0),bz=S.bazar.filter(function(r){return dt(r).slice(0,7)===MONTH}).reduce(function(x,r){return x+r.amt},0);
+var R=function(l,v,c){return '<div class="row"><span>'+l+'</span><span class="tag '+(c||"")+'">৳'+bn(v)+"</span></div>"};
+var bal=fee+inc-oth-sal-bz;
+return '<div class="card"><h3>এই মাসের হিসাব</h3>'+R("ছাত্রদের ফি আদায়",fee,"ok")+R("দান, যাকাত, ফিতরা, চাঁদা",inc,"ok")+R("শিক্ষক-কর্মচারীর বেতন",sal,"bad")+R("বাজার খরচ",bz,"bad")+R("অন্যান্য ব্যয়",oth,"bad")+'<div class="row"><b>অবশিষ্ট</b><b class="tag '+(bal<0?"bad":"ok")+'">৳'+bn(bal)+"</b></div></div>";
+}
+function vSms(){
+var a=S.att[TODAY]||{},d=dues().filter(function(s){return s.phone}),ab=S.students.filter(function(s){return a[s.id]==="a"&&s.phone}),sig=" — জামিয়াতুল আবরার আল ইসলামিয়া";
+var row=function(s,t){return '<div class="row"><div><b>'+esc(s.name)+"</b><small>"+esc(s.phone)+'</small></div><a class="btn" href="sms:'+encodeURIComponent(s.phone)+"?body="+encodeURIComponent(t)+'">SMS পাঠান</a></div>'};
+return '<div class="card"><h3>বকেয়া রিমাইন্ডার</h3>'+(d.map(function(s){return row(s,"আস্সালামু আলাইকুম। "+s.name+"-এর এ মাসের ফি ৳"+bn(s.fee-paid(s.id))+" বকেয়া আছে।"+sig)}).join("")||'<p class="empty">মোবাইল নম্বরসহ কোনো বকেয়া ছাত্র নেই</p>')+'</div><div class="card"><h3>আজকের অনুপস্থিত</h3>'+(ab.map(function(s){return row(s,"আস্সালামু আলাইকুম। "+s.name+" আজ মাদরাসায় অনুপস্থিত।"+sig)}).join("")||'<p class="empty">কেউ নেই</p>')+"</div>";
+}
+function vBackup(){
+return '<div class="card"><h3>ব্যাকআপ নিন</h3><p class="mu">নিচের লেখা কপি করে নিরাপদ জায়গায় রাখুন। ফোনের তথ্য হারালে পেস্ট করে ফিরিয়ে আনতে পারবেন।</p><textarea rows="5" readonly onfocus="this.select()">'+esc(JSON.stringify(S))+'</textarea></div><div class="card"><h3>ব্যাকআপ ফিরিয়ে আনুন</h3><textarea id="rs" rows="4" placeholder="এখানে পেস্ট করুন"></textarea><button class="full" onclick="restore()">ফিরিয়ে আনুন</button></div>';
+}
+function restore(){
+try{var o=JSON.parse(document.getElementById("rs").value);if(!o||typeof o!=="object")throw 0;if(!confirm("বর্তমান তথ্য মুছে ব্যাকআপ বসাবেন?"))return;S=o;fix();save();alert("ফিরিয়ে আনা হয়েছে");render()}catch(e){alert("ব্যাকআপটি সঠিক নয়")}
+}
+var CUST={attS:function(){return attView("students")},attT:function(){return attView("staff")},attR:attRep,fees:vFees,sum:vSum,sms:vSms,backup:vBackup};
+render();
+</script>
+</body>
+</html>
